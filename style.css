@@ -1,0 +1,334 @@
+/* =========================================
+   JUFIC ALUMINIUM & ALLIED LTD.
+   Employee Records Management System
+   ========================================= */
+
+/* COLOUR PALETTE */
+:root {
+    --graphite: #20262c;
+    --graphite-light: #303941;
+    --silver: #dce2e7;
+    --copper: #bd8054;
+    --copper-dark: #9c623b;
+    --white: #ffffff;
+    --background: #f3f5f7;
+    --text: #29333c;
+    --muted: #74808a;
+    --border: #e1e6ea;
+    --blue: #285f85;
+    --blue-light: #e8f1f7;
+    --red: #a83f3f;
+    --red-light: #f9ebeb;
+}
+
+/* GENERAL RESET */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #252b31;
+    color: var(--text);
+    line-height: 1.6;
+}
+
+/* HEADER */
+.header {
+    background: var(--graphite);
+    color: var(--white);
+    padding: 28px 5%;
+    border-bottom: 4px solid var(--copper);
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 27px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.header p {
+    margin: 5px 0 0;
+    color: var(--silver);
+    font-size: 13px;
+    letter-spacing: 1px;
+}
+
+/* MAIN CONTENT */
+.container {
+    width: 92%;
+    max-width: 1250px;
+    margin: 38px auto;
+    padding: 30px;
+    background: #30373e;
+    border: 1px solid #454d55;
+    border-radius: 12px;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.18);
+}
+
+/* PAGE INTRODUCTION */
+.page-title {
+    margin-bottom: 25px;
+}
+
+.page-title h2 {
+    margin: 0 0 5px;
+    color: #f1f3f5;
+    font-size: 27px;
+    font-weight: 700;
+}
+
+.page-title p {
+    margin: 0;
+    color: #c1c9d0;
+    font-size: 14px;
+}
+
+/* CONTENT PANEL */
+.table-card,
+.form-card {
+    background: var(--white);
+    padding: 28px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    box-shadow: 0 5px 18px rgba(32, 38, 44, 0.045);
+}
+
+.table-card {
+    overflow-x: auto;
+}
+
+/* BUTTONS */
+.btn {
+    display: inline-block;
+    padding: 11px 18px;
+    border: 0;
+    border-radius: 5px;
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+    transform: translateY(-1px);
+}
+
+.btn-primary {
+    background: var(--copper);
+    color: var(--white);
+}
+
+.btn-primary:hover {
+    background: var(--copper-dark);
+}
+
+.btn-edit {
+    background: var(--blue-light);
+    color: var(--blue);
+}
+
+.btn-edit:hover {
+    background: #d4e5f0;
+}
+
+.btn-delete {
+    background: var(--red-light);
+    color: var(--red);
+}
+
+.btn-delete:hover {
+    background: #f2d8d8;
+}
+
+/* EMPLOYEE TABLE */
+table {
+    width: 100%;
+    min-width: 650px;
+    margin-top: 24px;
+    border-collapse: collapse;
+    background: var(--white);
+}
+
+thead {
+    background: #eef1f3;
+}
+
+th {
+    padding: 16px 14px;
+    color: var(--graphite-light);
+    text-align: left;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.7px;
+    text-transform: uppercase;
+    border-bottom: 2px solid var(--silver);
+}
+
+td {
+    padding: 15px 14px;
+    border-bottom: 1px solid var(--border);
+    font-size: 14px;
+}
+
+tbody tr {
+    transition: background 0.2s ease;
+}
+
+tbody tr:hover {
+    background: #f8fafb;
+}
+
+tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* EMPLOYEE ID */
+.employee-id {
+    color: var(--copper-dark);
+    font-weight: 700;
+}
+
+/* ACTION BUTTONS */
+.actions {
+    white-space: nowrap;
+}
+
+.actions a {
+    margin-right: 5px;
+}
+
+/* FORMS */
+.form-card {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 22px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--graphite);
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.form-group input {
+    display: block;
+    width: 100%;
+    padding: 13px 14px;
+    border: 1px solid #cbd3da;
+    border-radius: 5px;
+    background: #fff;
+    color: var(--text);
+    font-family: inherit;
+    font-size: 14px;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: var(--copper);
+    box-shadow: 0 0 0 3px rgba(189, 128, 84, 0.14);
+}
+
+/* BACK LINK */
+.back-link {
+    display: inline-block;
+    margin-top: 22px;
+    color: var(--blue);
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+}
+
+/* EMPTY TABLE MESSAGE */
+.empty-message {
+    padding: 30px 15px;
+    color: var(--muted);
+    text-align: center;
+}
+
+/* FOOTER */
+.footer {
+    margin-top: 50px;
+    padding: 22px 15px;
+    border-top: 1px solid var(--border);
+    color: var(--muted);
+    text-align: center;
+    font-size: 12px;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 700px) {
+    .header {
+        padding: 23px 5%;
+    }
+
+    .header h1 {
+        font-size: 21px;
+    }
+
+    .container {
+        width: 94%;
+        margin: 25px auto;
+    }
+
+    .page-title h2 {
+        font-size: 23px;
+    }
+
+    .table-card,
+    .form-card {
+        padding: 18px;
+    }
+
+    .btn {
+        padding: 10px 13px;
+    }
+}
+
+/* FORM BUTTONS */
+.form-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 28px;
+}
+
+.btn-secondary {
+    background: #303941;
+    color: #ffffff;
+    border: 1px solid #303941;
+}
+
+.btn-secondary:hover {
+    background: #454f59;
+    border-color: #454f59;
+}
+
+/* CONSISTENT FORM SPACING */
+.form-group {
+    margin-bottom: 24px;
+}
+
+.form-group label {
+    margin-bottom: 10px;
+}
+
+.form-group input {
+    padding: 14px;
+}
